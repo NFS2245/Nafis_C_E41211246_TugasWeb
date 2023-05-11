@@ -16,3 +16,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+//digunakan untuk meregistrasikan rute (route) yang menyediakan beberapa aksi bawaan (default) dalam mengelola resource "user" pada aplikasi.
+Route::resource('user', 'ManagementUserController');
