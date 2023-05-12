@@ -1,5 +1,5 @@
 <?php
-
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +13,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Membuat rute RESTful untuk sumber daya HomeController pada alamat URL '/'
+Route::resource('/',HomeController::class);
