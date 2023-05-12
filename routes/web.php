@@ -1,4 +1,5 @@
 <?php
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
@@ -15,3 +16,6 @@ use Illuminate\Support\Facades\Route;
 
 // Membuat rute RESTful untuk sumber daya HomeController pada alamat URL '/'
 Route::resource('/',HomeController::class);
+
+// Membuat rute RESTful untuk sumber daya DashboardController pada alamat URL '/dashboard'
+Route::resource('dashboard',DashboardController::class);

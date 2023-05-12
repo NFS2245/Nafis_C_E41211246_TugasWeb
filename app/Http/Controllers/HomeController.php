@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Http\Controllers\Controller\frontend;
+
 use Illuminate\Http\Request;
 
 // Membuat kelas HomeController yang mewarisi kelas Controller bawaan Laravel
