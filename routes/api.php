@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ApiPendidikanController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -17,3 +18,8 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+Route::get('/api_pendidikan', [ApiPendidikanController::class, 'index']);
+Route::get('/api_pendidikan/{id}', [ApiPendidikanController::class, 'show']);
+Route::post('/api_pendidikan', [ApiPendidikanController::class, 'store']);
+Route::put('/api_pendidikan/{id}', [ApiPendidikanController::class, 'update']);
+Route::delete('/api_pendidikan/{id}', [ApiPendidikanController::class, 'destroy']);
